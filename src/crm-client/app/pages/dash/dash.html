@@ -1,0 +1,75 @@
+<ion-toolbar primary>
+    <ion-title>
+        CRM
+    </ion-title>
+
+    <ion-buttons end>
+        <button royal>
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-buttons>
+
+</ion-toolbar>
+
+<ion-toolbar [attr.primary]="isAndroid ? '' : null">
+    <ion-segment [(ngModel)]="pet" [attr.light]="isAndroid ? '' : null">
+        <ion-segment-button value="firstlast">
+            First Last
+        </ion-segment-button>
+        <ion-segment-button value="lastfirst">
+            Last, First
+        </ion-segment-button>
+        <ion-segment-button value="businessname">
+            Business Name
+        </ion-segment-button>
+    </ion-segment>
+</ion-toolbar>
+
+<ion-content class="outer-content">
+    <ion-searchbar>
+    </ion-searchbar>
+
+    <ion-list>
+        <ion-list-header>
+            A
+        </ion-list-header>
+
+        <ion-item-sliding>
+            <ion-item>
+                <h2>Abraham Lincoln, President, USA</h2>
+            </ion-item>
+            <ion-item-options>
+                <button primary>
+                    <ion-icon name="text"></ion-icon>
+                    Text
+                </button>
+                <button secondary>
+                    <ion-icon name="call"></ion-icon>
+                    Call
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+        
+        <ion-list-header>
+            B
+        </ion-list-header>
+        
+        <ion-item-sliding>
+            <ion-item>
+                <h2>Bill Clinton, President, USA</h2>
+            </ion-item>
+            <ion-item-options>
+                <button primary>
+                    <ion-icon name="text"></ion-icon>
+                    Text
+                </button>
+                <button secondary>
+                    <ion-icon name="call"></ion-icon>
+                    Call
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+        
+    </ion-list>
+
+</ion-content>
